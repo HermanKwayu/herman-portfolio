@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herman Kwayu - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+  <header id="hero">
+    <div class="container" data-aos="fade-down">
+      <h1 class="greeting">Hi, I’m Herman 👋</h1>
+      <img id="slideshow" class="profile-pic" src="images/img1.jpg" alt="Herman Kwayu" />
+      <div class="cta">
+        <a href="Herman-Kwayu-CV.pdf" download class="btn-cv">📄 Download CV</a>
+        <a href="https://www.linkedin.com/in/herman-kwayu-044733135" target="_blank">LinkedIn</a>
+        <a href="https://wa.me/255785670771" target="_blank">WhatsApp</a>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        Herman Kwayu is an expert in KYC, project management, and compliance with over six years of experience in the telecom and fintech industries.
+        He specializes in customer experience, compliance, and technical project management. Known for leading cross-functional teams to execute complex projects,
+        Herman combines a keen eye for detail with strong technical expertise. He holds an Advanced Diploma in Computing and multiple certifications,
+        demonstrating his commitment to continuous improvement and delivering high-impact results.
+      </p>
+    </section>
+
+    <section id="skills" data-aos="fade-left">
+      <h2>Skills</h2>
+      <ul>
+        <li>Project Management</li>
+        <li>Regulatory Compliance</li>
+        <li>User Management</li>
+        <li>UI/UX</li>
+      </ul>
+    </section>
+
+    <section id="experience" data-aos="fade-right">
+      <h2>Experience</h2>
+      <div class="experience">
+        <h3>Senior Project Manager – Telecom</h3>
+        <p>Led digital KYC rollout across regions with cross-functional teams. Focused on compliance, timelines, and experience KPIs.</p>
+      </div>
+      <div class="experience">
+        <h3>Compliance Lead – Fintech</h3>
+        <p>Built audit tools and automated trackers for regulatory reporting, ensuring continuous compliance with evolving standards.</p>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Digital KYC Platform</h3>
+        <p>Built an end-to-end onboarding platform integrated with face verification and case management workflows.</p>
+      </div>
+      <div class="project">
+        <h3>Compliance Tracker</h3>
+        <p>Created a dashboard to monitor key compliance metrics with exportable reporting and alerts.</p>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <form action="https://formsubmit.co/truthherman@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://hermankwayu.github.io/herman-portfolio/thanks.html">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Herman Kwayu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+    const images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
+    let currentIndex = 0;
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById("slideshow").src = "images/" + images[currentIndex];
+    }, 30000);
+  </script>
+</body>
+</html>
